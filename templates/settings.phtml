@@ -1,0 +1,110 @@
+<?php
+	/**
+	 * @var WW_SEOshop_Sign_Up $_this
+	 */
+?>
+
+<div class="wrap">
+	<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
+
+	<?php
+		$_this->print_admin_error_notices();
+		$_this->print_admin_update_notices();
+	?>
+
+	<form method="post" id="save-seoshop-settings">
+		<table class="form-table">
+			<tr>
+				<th scope="row"><label for="affiliate_company"><?php _e( 'Affiliate Company Name', $_this->text_domain() ); ?></label></th>
+				<td>
+					<input type="text" class="regular-text" id="affiliate_company" name="affiliate_company" value="<?php echo esc_attr( $_this->option( 'affiliate_company' ) ); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="affiliate_key"><?php _e( 'Affiliate Key (Referral Key)', $_this->text_domain() ); ?></label></th>
+				<td><input type="text" class="regular-text" id="affiliate_key" name="affiliate_key" value="<?php echo esc_attr( $_this->option( 'affiliate_key' ) ); ?>" /></td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="affiliate_url"><?php _e( 'Affiliate API URL', $_this->text_domain() ); ?></label></th>
+				<td><input type="text" class="regular-text" id="affiliate_url" name="affiliate_url" value="<?php echo esc_attr( $_this->option( 'affiliate_url' ) ); ?>" /></td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="sign_in_url"><?php _e( 'SEOshop Dashboard URL', $_this->text_domain() ); ?></label></th>
+				<td>
+					<input type="text" class="regular-text" id="sign_in_url" name="sign_in_url" value="<?php echo esc_attr( $_this->option( 'sign_in_url' ) ); ?>" />
+
+					<p class="description" id="tagline-description"><?php printf( __( 'Use %s as placeholder for the user ID and %s as placeholder for the login hash in the URL. These placeholders must be present to save the URL.', $_this->text_domain() ), '<code>%user_id%</code>', '<code>%login_hash%</code>' ); ?></p>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="sticky_header_height"><?php _e( 'Sticky header height', $_this->text_domain() ); ?></label></th>
+				<td>
+					<input type="number" id="sticky_header_height" name="sticky_header_height" value="<?php echo esc_attr( $_this->option( 'sticky_header_height' ) ); ?>" min="0" step="1" /> <?php _e( 'in px' ) ?>
+					<p class="description" id="tagline-description"><?php _e( 'Used to calculate the scroll position of the user\'s browser after the form has been submitted.', $_this->text_domain() ); ?></p>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="callback_success"><?php _e( 'Callback on success', $_this->text_domain() ); ?></label></th>
+				<td>
+					<input type="text" class="regular-text" id="callback_success" name="callback_success" value="<?php echo esc_attr( $_this->option( 'callback_success' ) ); ?>" />
+
+					<p class="description" id="tagline-description"><?php _e( 'JavaScript callback. Will be fired after the store has been created successfully and the success message has been shown to the user.', $_this->text_domain() ); ?></p>
+				</td>
+			</tr>
+		</table>
+
+		<h3><?php _e( 'Shortcode', $_this->text_domain() ); ?></h3>
+
+		<table class="form-table">
+			<tr>
+				<th scope="row"><label for="shortcode_class"><?php _e( 'Shortcode class', $_this->text_domain() ); ?></label></th>
+				<td><input type="text" class="text" id="shortcode_class" /> <?php _e( 'Optional' ) ?></td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="shortcode"><?php _e( 'Copy & paste this shortcode', $_this->text_domain() ); ?></label></th>
+				<td>
+					<input type="text" class="regular-text" id="shortcode" value="[seoshop_sign_up_form]" data-shortcode="seoshop_sign_up_form" readonly="readonly" /></td>
+			</tr>
+		</table>
+
+		<h3>Google reCAPTCHA</h3>
+
+		<p><?php printf( __( 'This plugin has a built in captcha functionality to avoid spam. It uses reCAPTCHA by Google. To use this feature you have to create a reCAPTCHA key pair for your domain. You can create a key pair for free on %s.', $_this->text_domain() ), '<a href="https://www.google.com/recaptcha/admin" target="_blank">Google reCAPTCHA</a>' ); ?></p>
+
+		<table class="form-table">
+			<tr>
+				<th scope="row"><label for="recaptcha_site_key"><?php _e( 'reCAPTCHA Site Key', $_this->text_domain() ); ?></label></th>
+				<td>
+					<input type="text" class="regular-text" id="recaptcha_site_key" name="recaptcha_site_key" value="<?php echo esc_attr( $_this->option( 'recaptcha_site_key' ) ); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="recaptcha_secret_key"><?php _e( 'reCAPTCHA Secret Key', $_this->text_domain() ); ?></label></th>
+				<td>
+					<input type="text" class="regular-text" id="recaptcha_secret_key" name="recaptcha_secret_key" value="<?php echo esc_attr( $_this->option( 'recaptcha_secret_key' ) ); ?>" />
+				</td>
+			</tr>
+		</table>
+
+		<p class="submit">
+			<input class="button-primary" type="submit" value="<?php _e( 'Update' ) ?>" />
+		</p>
+
+		<input type="hidden" name="action" value="save_seoshop_settings" />
+		<?php wp_nonce_field( 'save-seoshop-settings' ); ?>
+	</form>
+
+	<script>
+		(function( $ ) {
+			$( document ).on( 'change keyup', '#shortcode_class', function() {
+				var c = $( this ).val(), s = $( '#shortcode' ), code = s.data( 'shortcode' ) || false;
+
+				if ( s.length && code ) {
+					s.val( '[' + code + (c != '' ? ' class="' + c + '"' : '') + ']' );
+				}
+			} ).on( 'click', '#shortcode', function() {
+				this.select();
+			} );
+		})( jQuery );
+	</script>
+</div>
