@@ -1,0 +1,64 @@
+<?php
+	/**
+	 * This file can be overwritten in your theme folder. Just copy this file to /wp-content/themes/<your (child) theme>/seoshop-sign-up/shortcodes/ and modify it.
+	 *
+	 * @var array $args
+	 */
+?>
+
+<form method="post" class="ww_seoshop-sign-up-form<?php echo ! empty( $args['class'] ) ? ' ' . $args['class'] : ''; ?>">
+	<div class="ww_message-box"></div>
+
+	<div class="ww_form-rows">
+		<div class="form-row">
+			<div class="form-col"><label for="seoshop_store_name"><?php _e( 'Store Name', WW_SEOshop_Sign_Up::TEXT_DOMAIN ); ?></label></div>
+			<div class="form-col"><input type="text" name="store_name" id="seoshop_store_name" /></div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-col"><label for="seoshop_first_name"><?php _e( 'First Name', WW_SEOshop_Sign_Up::TEXT_DOMAIN ); ?></label></div>
+			<div class="form-col"><input type="text" name="first_name" id="seoshop_first_name" /></div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-col"><label for="seoshop_last_name"><?php _e( 'Last Name', WW_SEOshop_Sign_Up::TEXT_DOMAIN ); ?></label></div>
+			<div class="form-col"><input type="text" name="last_name" id="seoshop_last_name" /></div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-col"><label for="seoshop_email_address"><?php _e( 'Email Address', WW_SEOshop_Sign_Up::TEXT_DOMAIN ); ?></label></div>
+			<div class="form-col"><input type="email" name="email_address" id="seoshop_email_address" /></div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-col"><label for="seoshop_phone_number"><?php _e( 'Phone Number', WW_SEOshop_Sign_Up::TEXT_DOMAIN ); ?></label></div>
+			<div class="form-col"><input type="tel" name="phone_number" id="seoshop_phone_number" /></div>
+		</div>
+
+		<?php if ( WW_SEOshop_Sign_Up::recaptcha_active() ) : ?>
+			<div class="form-row">
+				<div class="form-col"></div>
+				<div class="form-col recaptcha"><?php WW_SEOshop_Sign_Up::recaptcha_generate(); ?></div>
+			</div>
+		<?php endif; ?>
+
+		<div class="form-row">
+			<div class="form-col"></div>
+			<div class="form-col submit-col">
+				<button type="submit" name="submit" value="1"><?php _e( 'Sign Up for SEOshop', WW_SEOshop_Sign_Up::TEXT_DOMAIN ); ?></button>
+				<div class="form-loader la-ball-spin-clockwise la-dark la-sm">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input type="hidden" name="action" value="<?php echo esc_attr( WW_SEOshop_Sign_Up::PLUGIN_PREFIX . 'process_form' ); ?>" />
+</form>
