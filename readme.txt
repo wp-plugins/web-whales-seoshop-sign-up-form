@@ -25,7 +25,7 @@ Proudly presented to you by [Web Whales](https://webwhales.nl/).
 
 == Frequently Asked Questions ==
 = The sign up form doesn't fit well in my theme. Is there anyway to adjust the form? =
-Yes there is! Just copy the templates/shortcodes/sign_up_form.phtml to /wp-content/themes/<your (child) theme>/seoshop-sign-up/shortcodes/ and modify it. Please make sure you don't remove any classes or input names to keep the form working.
+Yes there is! Just copy the `sign_up_form.phtml` file from `/wp-content/plugins/web-whales-seoshop-sign-up-form/templates/shortcodes` to `/wp-content/themes/[your (child) theme]/seoshop-sign-up/shortcodes/` and modify it. Please make sure you don't remove any classes, elements or input names to keep the form working.
 
 == Changelog ==
 = 1.0 =
