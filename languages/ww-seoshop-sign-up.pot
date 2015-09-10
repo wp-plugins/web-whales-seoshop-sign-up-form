@@ -1,0 +1,168 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ww-seoshop-sign-up\n"
+"POT-Creation-Date: 2015-09-10 10:47+0200\n"
+"Last-Translator: Ronald Edelschaap <rlwedelschaap@gmail.com>\n"
+"Language-Team: Web Whales <it@webwhales.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../webwhales-seoshop-sign-up-form.php:4
+msgid "This plugin provides an affiliate sign up form for SEOshop Partners. Not yet a SEOshop Partner? Request a partnership for free at <a href=\"http://www.getseoshop.com/partners/?utm_source=Web%20Whales&utm_medium=referral&utm_campaign=Web%20Whales%20SEOshop%20Sign%20Up%20WordPress%20plugin\" target=\"_blank\">SEOshop</a>."
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:138
+msgid "Your SEOshop settings have been updated."
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:142
+msgid "Important!"
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:142
+#, php-format
+msgid "You can use this plugin when you are a registered SEOshop Partner only. Not yet a SEOshop Partner? Request a partnership for free at %s."
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:142
+msgid "http://www.getseoshop.com/partners/"
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:189
+msgid "SEOshop Affiliate Settings"
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:311
+msgid "Congratulations! Your SEOshop store has been created."
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:314
+#, php-format
+msgid "The password for your SEOshop account is %s."
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:317
+msgid "Please use the following link to go to your SEOshop Dashboard."
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:324
+#: ../webwhales-seoshop-sign-up-form.php:334
+#: ../webwhales-seoshop-sign-up-form.php:345
+#: ../webwhales-seoshop-sign-up-form.php:544
+msgid "Error:"
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:324
+#: ../webwhales-seoshop-sign-up-form.php:334
+msgid "Not all fields are filled in correctly."
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:327
+#: ../webwhales-seoshop-sign-up-form.php:342
+msgid "An unknown error has occurred. Please try again or contact us for any support."
+msgstr ""
+
+#: ../webwhales-seoshop-sign-up-form.php:345
+#: ../webwhales-seoshop-sign-up-form.php:544
+msgid "The SEOshop sign up settings are not set up correctly."
+msgstr ""
+
+#: ../templates/settings.phtml:18
+msgid "Affiliate Company Name"
+msgstr ""
+
+#: ../templates/settings.phtml:24
+msgid "Affiliate Key (Referral Key)"
+msgstr ""
+
+#: ../templates/settings.phtml:28
+msgid "Affiliate API URL"
+msgstr ""
+
+#: ../templates/settings.phtml:32
+msgid "SEOshop Dashboard URL"
+msgstr ""
+
+#: ../templates/settings.phtml:36
+#, php-format
+msgid "Use %s as placeholder for the user ID and %s as placeholder for the login hash in the URL. These placeholders must be present to save the URL."
+msgstr ""
+
+#: ../templates/settings.phtml:40
+msgid "Sticky header height"
+msgstr ""
+
+#: ../templates/settings.phtml:42
+msgid "in px"
+msgstr ""
+
+#: ../templates/settings.phtml:43
+msgid "Used to calculate the scroll position of the user's browser after the form has been submitted."
+msgstr ""
+
+#: ../templates/settings.phtml:47
+msgid "Callback on success"
+msgstr ""
+
+#: ../templates/settings.phtml:51
+msgid "JavaScript callback. Will be executed after the store has been created successfully and the success message has been shown to the user."
+msgstr ""
+
+#: ../templates/settings.phtml:54
+msgid "Examples:"
+msgstr ""
+
+#: ../templates/settings.phtml:62
+msgid "Shortcode"
+msgstr ""
+
+#: ../templates/settings.phtml:66
+msgid "Shortcode class"
+msgstr ""
+
+#: ../templates/settings.phtml:70
+msgid "Copy & paste this shortcode"
+msgstr ""
+
+#: ../templates/settings.phtml:78
+#, php-format
+msgid "This plugin has a built in captcha functionality to avoid spam. It uses reCAPTCHA by Google. To use this feature you have to create a reCAPTCHA key pair for your domain. You can create a key pair for free on %s."
+msgstr ""
+
+#: ../templates/settings.phtml:82
+msgid "reCAPTCHA Site Key"
+msgstr ""
+
+#: ../templates/settings.phtml:88
+msgid "reCAPTCHA Secret Key"
+msgstr ""
+
+#: ../templates/shortcodes/sign_up_form.phtml:14
+msgid "Store Name"
+msgstr ""
+
+#: ../templates/shortcodes/sign_up_form.phtml:19
+msgid "First Name"
+msgstr ""
+
+#: ../templates/shortcodes/sign_up_form.phtml:24
+msgid "Last Name"
+msgstr ""
+
+#: ../templates/shortcodes/sign_up_form.phtml:29
+msgid "Email Address"
+msgstr ""
+
+#: ../templates/shortcodes/sign_up_form.phtml:34
+msgid "Phone Number"
+msgstr ""
+
+#: ../templates/shortcodes/sign_up_form.phtml:48
+msgid "Sign Up for SEOshop"
+msgstr ""
