@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ww-seoshop-sign-up\n"
-"POT-Creation-Date: 2015-08-09 22:26+0200\n"
-"PO-Revision-Date: 2015-08-10 11:59+0200\n"
+"POT-Creation-Date: 2015-09-10 10:47+0200\n"
+"PO-Revision-Date: 2015-09-10 10:47+0200\n"
 "Last-Translator: Ronald Edelschaap <rlwedelschaap@gmail.com>\n"
 "Language-Team: Web Whales <it@webwhales.nl>\n"
 "Language: nl\n"
@@ -54,19 +54,25 @@ msgstr "Het wachtwoord voor je SEOshop account is %s."
 msgid "Please use the following link to go to your SEOshop Dashboard."
 msgstr "Gebruik de volgende link om naar jouw SEOshop dashboard te gaan."
 
-#: ../webwhales-seoshop-sign-up-form.php:324 ../webwhales-seoshop-sign-up-form.php:334 ../webwhales-seoshop-sign-up-form.php:345 ../webwhales-seoshop-sign-up-form.php:544
+#: ../webwhales-seoshop-sign-up-form.php:324
+#: ../webwhales-seoshop-sign-up-form.php:334
+#: ../webwhales-seoshop-sign-up-form.php:345
+#: ../webwhales-seoshop-sign-up-form.php:544
 msgid "Error:"
 msgstr "Fout:"
 
-#: ../webwhales-seoshop-sign-up-form.php:324 ../webwhales-seoshop-sign-up-form.php:334
+#: ../webwhales-seoshop-sign-up-form.php:324
+#: ../webwhales-seoshop-sign-up-form.php:334
 msgid "Not all fields are filled in correctly."
 msgstr "Niet alle velden zijn juist ingevuld."
 
-#: ../webwhales-seoshop-sign-up-form.php:327 ../webwhales-seoshop-sign-up-form.php:342
+#: ../webwhales-seoshop-sign-up-form.php:327
+#: ../webwhales-seoshop-sign-up-form.php:342
 msgid "An unknown error has occurred. Please try again or contact us for any support."
 msgstr "Er is een onbekende fout opgetreden. Probeer het opnieuw of neem contact met ons op voor hulp."
 
-#: ../webwhales-seoshop-sign-up-form.php:345 ../webwhales-seoshop-sign-up-form.php:544
+#: ../webwhales-seoshop-sign-up-form.php:345
+#: ../webwhales-seoshop-sign-up-form.php:544
 msgid "The SEOshop sign up settings are not set up correctly."
 msgstr "De SEOshop affiliate instellingen zijn niet juist ingesteld."
 
@@ -108,31 +114,35 @@ msgid "Callback on success"
 msgstr "Callback on success"
 
 #: ../templates/settings.phtml:51
-msgid "JavaScript callback. Will be fired after the store has been created successfully and the success message has been shown to the user."
+msgid "JavaScript callback. Will be executed after the store has been created successfully and the success message has been shown to the user."
 msgstr "JavaScript callback. Wordt uitgevoerd nadat de winkel is aangemaakt en succesbericht is getoond aan de gebruiker."
 
-#: ../templates/settings.phtml:56
+#: ../templates/settings.phtml:54
+msgid "Examples:"
+msgstr "Voorbeelden:"
+
+#: ../templates/settings.phtml:62
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: ../templates/settings.phtml:60
+#: ../templates/settings.phtml:66
 msgid "Shortcode class"
 msgstr "Shortcode class"
 
-#: ../templates/settings.phtml:64
+#: ../templates/settings.phtml:70
 msgid "Copy & paste this shortcode"
 msgstr "Kopieer & plak deze shortcode"
 
-#: ../templates/settings.phtml:72
+#: ../templates/settings.phtml:78
 #, php-format
 msgid "This plugin has a built in captcha functionality to avoid spam. It uses reCAPTCHA by Google. To use this feature you have to create a reCAPTCHA key pair for your domain. You can create a key pair for free on %s."
 msgstr "Deze plugin heeft een ingebouwde captcha functie om spam te voorkomen. Het gebruikt reCAPTCHA van Google. Om deze functie te gebruiken dien je een reCAPTCHA key pair aan te maken voor jouw domein. Je kunt gratis een key pair aanmaken op %s."
 
-#: ../templates/settings.phtml:76
+#: ../templates/settings.phtml:82
 msgid "reCAPTCHA Site Key"
 msgstr "reCAPTCHA site key"
 
-#: ../templates/settings.phtml:82
+#: ../templates/settings.phtml:88
 msgid "reCAPTCHA Secret Key"
 msgstr "reCAPTCHA secret key"
 

@@ -2,7 +2,7 @@
 	/**
 	 * Plugin Name: SEOshop Sign Up Form by Web Whales
 	 * Description: This plugin provides an affiliate sign up form for SEOshop Partners. Not yet a SEOshop Partner? Request a partnership for free at <a href="http://www.getseoshop.com/partners/?utm_source=Web%20Whales&utm_medium=referral&utm_campaign=Web%20Whales%20SEOshop%20Sign%20Up%20WordPress%20plugin" target="_blank">SEOshop</a>.
-	 * Version: 1.0
+	 * Version: 1.0.1
 	 * Author: Web Whales
 	 * Author URI: https://webwhales.nl
 	 * Contributors: ronald_edelschaap
@@ -11,11 +11,11 @@
 	 * Text Domain: ww-seoshop-sign-up
 	 * Domain Path: /languages
 	 *
-	 * Requires at least: 4.1
+	 * Requires at least: 4.2
 	 * Tested up to: 4.3
 	 *
 	 * @author  Web Whales
-	 * @version 1.0
+	 * @version 1.0.1
 	 */
 
 	if ( ! defined( 'ABSPATH' ) ) {
@@ -27,7 +27,7 @@
 	 */
 	final class WW_SEOshop_Sign_Up {
 
-		const PLUGIN_PREFIX = 'ww_seoshop_sign_up_', PLUGIN_SLUG = 'ww-seoshop-sign-up', PLUGIN_VERSION = '1.0', TEXT_DOMAIN = 'ww-seoshop-sign-up';
+		const PLUGIN_PREFIX = 'ww_seoshop_sign_up_', PLUGIN_SLUG = 'ww-seoshop-sign-up', PLUGIN_VERSION = '1.0.1', TEXT_DOMAIN = 'ww-seoshop-sign-up';
 
 		private static $instance, $notices = array( 'error' => array(), 'update' => array() );
 
@@ -657,8 +657,6 @@
 			);
 
 			switch ( $current_version ) {
-				case '0':
-				case '0.1':
 				default:
 					if ( empty( $current_settings['affiliate_url'] ) ) {
 						self::add_option( 'affiliate_url', 'https://seoshop.webshopapp.com/api/gateway' );
@@ -671,7 +669,7 @@
 					break;
 			}
 
-			self::add_option( 'plugin_version', self::PLUGIN_VERSION );
+			self::update_option( 'plugin_version', self::PLUGIN_VERSION );
 		}
 
 		/**
@@ -730,7 +728,7 @@
 		private static function has_shortcode( $shortcode ) {
 			if ( is_singular() ) {
 				$post         = get_post();
-				$post_content = apply_filters( 'ww_seoshop_sign_up_has_shortcode_filter_post_content', $post->post_content );
+				$post_content = apply_filters( 'ww_seoshop_sign_up_has_shortcode_filter_post_content', $post->post_content, $post );
 
 				return ! empty( $post_content ) && stripos( $post_content, '[' . $shortcode ) !== false;
 			}

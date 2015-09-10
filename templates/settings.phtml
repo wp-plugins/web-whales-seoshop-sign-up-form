@@ -48,7 +48,13 @@
 				<td>
 					<input type="text" class="regular-text" id="callback_success" name="callback_success" value="<?php echo esc_attr( $_this->option( 'callback_success' ) ); ?>" />
 
-					<p class="description" id="tagline-description"><?php _e( 'JavaScript callback. Will be fired after the store has been created successfully and the success message has been shown to the user.', $_this->text_domain() ); ?></p>
+					<p class="description" id="tagline-description"><?php _e( 'JavaScript callback. Will be executed after the store has been created successfully and the success message has been shown to the user.', $_this->text_domain() ); ?></p>
+
+					<p class="description" id="tagline-description" style="margin-top: 15px;">
+						<strong><?php _e( 'Examples:', $_this->text_domain() ); ?></strong>
+						<span style="display: block; margin: 3px 0;"><code>my_custom_javascript_function();</code></span>
+						<span style="display: block; margin: 3px 0;"><code>ga('send', 'event', 'SEOshop', 'sign ups', 'new sign up');</code></span>
+					</p>
 				</td>
 			</tr>
 		</table>
